@@ -32,12 +32,17 @@ development:
     database: the_life_planner_development
   cache:
     <<: *sqlite
-    database: storage/the_life_planner_development_cache.sqlite3
+    database: storage/life_task_planner_development_cache.sqlite3
     migrations_paths: db/cache_migrate
   cable:
     <<: *sqlite
-    database: storage/the_life_planner_development_cable.sqlite3
+    database: storage/life_task_planner_development_cable.sqlite3
     migrations_paths: db/cable_migrate
+  queue:
+    <<: *sqlite
+    database: storage/life_task_planner_development_queue.sqlite3
+    migrations_paths: db/queue_migrate
+
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.

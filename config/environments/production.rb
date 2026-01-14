@@ -55,6 +55,8 @@ Rails.application.configure do
 
   config.solid_queue.connects_to = { database: { writing: :queue } }
 
+  config.solid_queue.connects_to = { database: { writing: :queue } }
+
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
