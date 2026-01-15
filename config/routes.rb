@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "messages/create"
+  mount MissionControl::Jobs::Engine, at: "/jobs"
+
   resource :session
   resources :passwords, param: :token
   resources :tasks do
