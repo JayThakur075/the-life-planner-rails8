@@ -13,4 +13,4 @@ development:
   periodic_archiver:
     class: TaskArchiverJob
     queue: background
-    schedule: every day at 2am
+    schedule: every 30 seconds

@@ -48,14 +48,23 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  # Use Pry as the Rails console alternative.
+  gem "pry", "~> 0.15.0"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", "~> 7.1"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Use RSpec for testing [https://rspec.info/]
+  gem "rspec-rails", "~> 8.0"
+
+  # Use Factory Bot for test data creation.
+  gem "factory_bot_rails"
+
+  # Use Faker for generating fake data.
+  gem "faker"
 end
 
 group :development do
